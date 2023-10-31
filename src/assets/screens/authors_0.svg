@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="97px" height="97px" viewBox="0 0 97 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 38</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-893.000000, -1565.000000)">
+            <g id="Group-38" transform="translate(893.000000, 1565.000000)">
+                <g id="Group-37">
+                    <rect id="Rectangle" fill="#E7EEDB" transform="translate(53.464466, 46.464466) rotate(-45.000000) translate(-53.464466, -46.464466) " x="12.4644661" y="31.4644661" width="82" height="30" rx="15"></rect>
+                    <path d="M28.2270075,64.0473761 L16.7008156,68 L12,63.2978899 L15.9513233,51.7724571 L59.182038,8.54275698 C62.5717417,5.15241434 68.0680184,5.15241434 71.4577222,8.54275698 C74.8474259,11.9317672 74.8474259,17.4273334 71.4577222,20.8170098 L28.2270075,64.0473761 Z" id="Stroke-3" stroke="#004B59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M39,25 C39.775051,21.231213 41.5856964,17.7046022 44.4503586,14.8554307 C48.3900915,10.9354471 53.6206987,8.99934564 59,9" id="Stroke-11" stroke="#004B59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M39.7070402,26.707027 C39.3164272,27.0976577 38.6833026,27.0976577 38.2926895,26.707027 C37.9024368,26.3167568 37.9024368,25.6832432 38.2926895,25.292973 C38.6833026,24.9023423 39.3164272,24.9023423 39.7070402,25.292973 C40.0976533,25.6832432 40.0976533,26.3167568 39.7070402,26.707027 Z" id="Stroke-15" stroke="#004B59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect id="Rectangle-Copy-7" fill-opacity="0.01" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="97" height="97"></rect>
+                    <path d="M59,9 L71,21" id="Line" stroke="#004B59" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M17,51 L29,63" id="Line-Copy" stroke="#004B59" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M23,71 L83,71" id="Line-8" stroke="#004B59" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M59,61 L83,61" id="Line-8-Copy" stroke="#004B59" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+                <polygon id="Fill-7" fill="#FFFFFF" points="12.0572195 64 10 70 16 67.9430104"></polygon>
+                <polygon id="Stroke-9" stroke="#004B59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="12.0572195 64 10 70 16 67.9430104"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
