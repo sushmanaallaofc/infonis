@@ -9,7 +9,7 @@ const ContactUs = ({dispatch}) => {
  
 
   return (
-    <div>
+    <div style={{background:'#F5F5F5',padding:10}}>
       Contact Us
     </div>
   );
