@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/components/Header.css';
-import Logo from "../assets/components/Logo.jpg"
+import Logo from "../assets/components/logo2.jpg"
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
 

@@ -4,7 +4,7 @@ const Blog = ({dispatch}) => {
 
   return (
     <>
-      <div>
+      <div style={{background:'#F5F5F5',padding:10}}>
         Blog
       </div>
     </>

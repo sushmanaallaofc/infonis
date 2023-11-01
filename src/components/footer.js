@@ -6,130 +6,200 @@ import {  faEnvelopeOpen, faMapMarkerAlt, faPhone } from '@fortawesome/free-soli
 import Send from '../assets/components/telegram.png';
 import facebookImg from '../assets/components/facebook.png';
 import twitterImg from '../assets/components/twitter.png';
-import googleImg from '../assets/components/googleplus.png';
+import instaImg from '../assets/components/instagram.svg';
+import linkedinImg from '../assets/components/linkedin.png';
+import playstore from '../assets/components/playstore.webp';
+import appstore from '../assets/components/appStore.webp';
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="footer-section">
-        <div className="container">
-            <div className="footer-cta pt-5 pb-5">
-                <div className="row">
-                    <div className="col-xl-4 col-md-4 mb-30">
-                        <div className="single-cta">
-                        <FontAwesomeIcon icon={faMapMarkerAlt}  />
-                           
-                            <div className="cta-text">
-                                <h4>Find us</h4>
-                                <span>ABC Avenue, XYZ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 col-md-4 mb-30">
-                        <div className="single-cta">
-                        <FontAwesomeIcon icon={faPhone}  />
-                            <div className="cta-text">
-                                <h4>Call us</h4>
-                                <span>9876543210</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 col-md-4 mb-30">
-                        <div className="single-cta">
-                        <FontAwesomeIcon icon={faEnvelopeOpen}  />
-                            <div className="cta-text">
-                                <h4>Mail us</h4>
-                                <span>mail@info.com</span>
-                            </div>
-                        </div>
-                    </div>
+        <div className="row" style={{padding:20}}>
+            
+            <div className='col-lg-4 col-6' style={{textAlign:'center'}}>
+            <div className='linksHeader'>Useful Links</div>
+            <div className='d-flex justify-content-center linksSection'>
+                <div className='leftLinks' >
+                  <ul>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        Careers
+                    </li>
+                    <li>
+                        Blog
+                    </li>
+                    <li>
+                        Press
+                    </li>
+                    <li>
+                        Lead
+                    </li>
+                    <li>
+                        Value
+                    </li>
+                  </ul>
+                </div>
+                <div className='rightLinks'>
+                <ul>
+                    <li>
+                        Privacy
+                    </li>
+                    <li>
+                        Terms
+                    </li>
+                    <li>
+                        FAQs
+                    </li>
+                    <li>
+                        Security
+                    </li>
+                    <li >
+                    <NavLink exact to="/Mobile" className="nav-link" activeClassName="active">
+            Mobile
+          </NavLink>
+                    </li>
+                    <li>
+                        Contact
+                    </li>
+                  </ul>
                 </div>
             </div>
-            <div className="footer-content pt-5 pb-5">
-                <div className="row">
-                    <div className="col-xl-4 col-lg-4 mb-50">
-                        <div className="footer-widget">
-                            <div className="footer-logo">
-                                <img  src={Logo}  className="img-fluid"  />
-                            </div>
-                            <div className="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div className="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="#">
-                                <img  src={facebookImg}  />
-
-                                    <i className="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#">
-                                <img  src={twitterImg}   />
-                                    <i className="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#">
-                                <img  src={googleImg}  />
-                                    <i className="fab fa-google-plus-g google-bg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div className="footer-widget">
-                            <div className="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div className="footer-widget">
-                            <div className="footer-widget-heading">
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div className="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                            </div>
-                            <div className="subscribe-form">
-                                <form action="#" style={{display:'flex'}}>
-                                    <input type="text" placeholder="Email Address" />
-                                    <button>
-                                    {/* <FontAwesomeIcon icon={fabTele}  /> */}
-                                    <img  src={Send} width={23}  />
-                                  </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div className='col-lg-4 col-6' style={{textAlign:'center'}}>
+            <div className='linksHeader'>Categories</div>
+            <div className='d-flex justify-content-center linksSection'>
+                <div className='leftLinks' >
+                  <ul>
+                    <li>
+                        Vegetables & Fruits
+                    </li>
+                    <li>
+                    Cold Drinks & Juices
+                    </li>
+                    <li>
+                    Paan Corner
+                    </li>
+                    <li>
+                    Dairy & Breakfast
+                    </li>
+                    <li>
+                    Chicken, Meat & Fish
+                    </li>
+                    <li>
+                    Atta, Rice & Dal
+                    </li>
+                  </ul>
+                </div>
+                <div className='rightLinks'>
+                <ul>
+                    <li>
+                    Tea, Coffee & Health Drinks
+                    </li>
+                    <li>
+                        
+                    Munchies
+                    </li>
+                    <li>
+                    Home & Office
+                    </li>
+                    <li>
+                    Sauces & Spreads
+                    </li>
+                    <li>
+                    Instant & Frozen Food
+                    </li>
+                    <li>
+                        
+                    Books
+                    </li>
+                  </ul>
                 </div>
             </div>
+            </div>
+            <div className='col-lg-4 col-6' style={{textAlign:'center'}}>
+            <div className='linksHeader'>Other Links</div>
+            <div className='d-flex justify-content-center linksSection'>
+                <div className='leftLinks' >
+                  <ul>
+                    <li>
+                        Link1
+                    </li>
+                    <li>
+                        Link2
+                    </li>
+                    <li>
+                        Link3
+                    </li>
+                    <li>
+                        Link4
+                    </li>
+                    <li>
+                        Link5
+                    </li>
+                    <li>
+                        Link6
+                    </li>
+                  </ul>
+                </div>
+                <div className='rightLinks'>
+                <ul>
+                    <li>
+                        Link1
+                    </li>
+                    <li>
+                        Link2
+                    </li>
+                    <li>
+                        Link3
+                    </li>
+                    <li>
+                        Link4
+                    </li>
+                    <li>
+                        Link5
+                    </li>
+                    <li>
+                        Link6
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            </div>
+           
         </div>
+        <div className='d-flex justify-content-around align-items-center' style={{padding:20}}>
+            <div className='d-flex align-items-center'>
+            <div style={{fontWeight:500,marginRight:20}}>Download App</div>
+            <div>
+                <img style={{width:92,height:30,marginRight:20}}  src={playstore}/>
+            </div>
+            <div>
+                <img style={{width:92,height:30}}  src={appstore}/>
+            </div>
+            </div>
+            <div>
+            <div className="d-flex">
+                               <div style={{marginRight:20,cursor:'pointer'}}>
+                                <img src={facebookImg} />
+                               </div>
+                               <div style={{marginRight:20,cursor:'pointer'}}>
+                                <img src={twitterImg} />
+                               </div>
+                               <div style={{cursor:'pointer'}}>
+                                <img style={{width:50,height:50}} src={instaImg} />
+                               </div>
+            </div>
+            </div>
+                    
+        </div>
+        
         <div className="copyright-area">
             <div className="container">
-                <div className="row">
-                    <div className="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div className="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a href="">XpertText</a></p>
-                        </div>
-                    </div>
-                    <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div className="footer-menu">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                 <div>
+                    
+                 </div>
             </div>
         </div>
     </footer>
