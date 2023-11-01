@@ -9,6 +9,7 @@ import Home from './screens/home';
 import AboutUs from './screens/aboutUs';
 import Blog from './screens/blog';
 import ContactUs from './screens/contactUs';
+import MobileScreen from './components/mobileScreen';
 function App() {
  
   return (      
@@ -19,6 +20,7 @@ function App() {
 <Route exact path='/AboutUs' element={<AboutUs />} />
 <Route exact path='/Blog' element={<Blog />} />
 <Route exact path='/ContactUs' element={<ContactUs />} />
+<Route exact path='/Mobile' element={<MobileScreen />} />
 </Routes>
 <Footer />
 </div>
