@@ -1,0 +1,84 @@
+.fieldItem{
+    margin: 0 auto;
+}
+.fieldItemHeader{
+    font-weight: 550;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.fieldItemImg{
+    width: 33%;
+    padding-right: 16px;
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.paragraphCard{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.paraCardImgCont{
+    display: inline-block;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    
+}
+.paraCardImg{
+    width:108px;
+    height:108px;
+    margin: auto;
+    display: block;
+}
+
+.paraCardTitle{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 24px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.paraCardContent{
+    font-size: 17px;
+    color: #1F1F1F;
+    margin-bottom: 12px;
+    line-height: 152%;
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+}
+.paraCardContent div{
+ margin-bottom: 12px;
+}
+@media (min-width:992px) {
+    .fieldItem{
+         max-width: 960px;
+         width: 100%;
+         margin-bottom: 48px
+    }
+}
+
+@media screen and (max-width:992px) {
+    .fieldItem{
+        max-width: 860px;
+        width: 100%;
+        margin-bottom: 40px;
+   }
+}
+
+@media (max-width:992px) {
+    .fieldItem{
+         margin: 45px auto;
+    }
+}

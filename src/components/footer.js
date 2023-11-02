@@ -196,11 +196,11 @@ const Footer = () => {
         </div>
         
         <div className="copyright-area">
-            <div className="container">
-                 <div>
-                    
-                 </div>
-            </div>
+            
+            <div className="copyright-text">
+                            <p>Copyright &copy; 2023, All Right Reserved <a href="">Infinis</a></p>
+                        </div>
+           
         </div>
     </footer>
   );

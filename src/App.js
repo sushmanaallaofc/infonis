@@ -19,7 +19,9 @@ function App() {
 <div style={{    background: 'rgb(245, 245, 245)',
     padding: 10,
     height: '100%',
-    width: '100%'}}>
+    width: '100%',
+    borderTop:'1px solid #F5F5F5',
+    borderBottom:'1px solid #F5F5F5'}}>
 
 <Routes>
 <Route exact path='/' element={<Home />} />
