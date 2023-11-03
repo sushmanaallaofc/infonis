@@ -472,7 +472,7 @@ and earn money on every purchase.</div>
      <MainContainer>
      <div className="fieldItem">
       <div className="row">
-        <div className="col-lg-6 col-12">
+        <div className="col-lg-6 col-12" style={{margin:'auto'}}>
           <Typography
             style={{ fontSize: "40px", fontWeight: "700" }}
             variant="h3"
@@ -594,7 +594,6 @@ and earn money on every purchase.</div>
       </div>
       </div>
     </MainContainer>
-    
       </div>
     </>
   );
