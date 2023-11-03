@@ -126,6 +126,7 @@ const MobileScreen = ({ dispatch }) => {
               </RadioGroup>
             </FormControl>
             <FlexContainer>
+              <div>
               <TextField
                 id="outlined-multiline-flexible"
                 label={value === "Email" ? "Email" : "Phone"}
@@ -139,21 +140,23 @@ const MobileScreen = ({ dispatch }) => {
                 value={value === "Email" ? email : phoneNumber}
                 onChange={(e) => (value === "Email" ? setEmail(e.target.value) : setPhoneNumber(e.target.value))}
               />
-              <StyledButton
-                variant="contained"
-                color="primary"
-                
-                style={{ height: "56px" }}
-              >
-                Share app link
-              </StyledButton>
-              
-            </FlexContainer>
-            {error && (
+              {error && (
                 <Typography variant="body2" color="error">
                   {error}
                 </Typography>
               )}
+              </div>
+              
+              <StyledButton
+                variant="contained"
+                color="primary"
+                onClick={handleClick}
+                style={{ height: "56px" }}
+              >
+                Share app link
+              </StyledButton>
+            </FlexContainer>
+            
           </ChildDiv>
           <Typography variant="caption" display="block" gutterBottom>
             Download App from
