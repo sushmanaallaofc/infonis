@@ -1,0 +1,310 @@
+.aboutUs{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(180deg,#F8CB46 0,#318616 100%);
+    background-image: url(../../assets/screens/partner-masthead-desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 375px;
+}
+
+.textInImg{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+.fieldItem{
+    margin: 0 auto;
+}
+.fieldItemHeader{
+    font-weight: 550;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+.paraOnCard{
+    position: absolute;
+    top:40%;
+    left:20px
+}
+.paraOnCard p{
+    width:60%
+}
+.bgGradient{
+    height:252px
+}
+.bgGradientImgCont{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.bgGradientImg{
+    height: 100%;
+    max-height: 100%;
+    float:right;
+    padding: 20px;
+}
+.bgGradientPara1{
+    display: block;
+    width: 50%;
+}
+.bgGradientPara1Text{
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+}
+.bgGradientPara2{
+    display: none;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.snip1584 {
+  font-family: 'Monospace', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 308px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+.snip1584 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1584:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.snip1584 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.snip1584 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.snip1584 h3,
+.snip1584 h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.snip1584 h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.snip1584 h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip1584 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.snip1584:hover:before,
+.snip1584.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip1584:hover h3,
+.snip1584.hover h3,
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.snip1584:hover h3,
+.snip1584.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/* Demo purposes only */
+
+.app{
+	width: 100%;
+	margin: auto;
+	font-family: 'Raleway';
+	font-size: 24px;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+.custom-prev-arrow {
+    color: black !important;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    left: -20px;
+  }
+  
+  .custom-next-arrow {
+    color: black !important;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    right: -20px;
+  }
+  
+@media screen and (max-width: 991px){
+.bgGradient {
+    height: 404px;
+}
+.bgGradientImgCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.bgGradientImg{
+    height: 70%;
+    max-height: 240px;
+    float:right;
+    width:auto;
+}
+.bgGradientPara1{
+    display: none;
+}
+.bgGradientPara2{
+    display: block;
+}
+.bgGradientPara2Text{
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+}
+}
+@media screen and (max-width: 772px){
+    .paraOnCard{
+        position: relative;
+        width:80%
+    }
+    .paraOnCard p{
+        width:100%
+    }
+    }
+
+@media screen and (max-width: 992px){
+.textInImg {
+    font-size: 32px;
+    line-height: 37px;
+}
+.app{
+	width: 80%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .aboutUs {
+        background-image: url(../../assets/screens/partner-masthead-desktop.png);
+        height: 375px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px){
+    .aboutUs {
+        background-image: url(../../assets/screens/partner-masthead-mobile.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    }
+@media (min-width:992px) {
+    .fieldItem{
+         max-width: 960px;
+         width: 100%;
+         margin-bottom: 48px
+    }
+    .imgFieldItem{
+        margin-bottom: 48px
+    }
+}
+
+@media screen and (max-width:992px) {
+    .fieldItem{
+        max-width: 860px;
+        width: 100%;
+        margin-bottom: 40px;
+   }
+   .imgFieldItem{
+    margin-bottom: 40px
+}
+}
+
+@media (max-width:992px) {
+    .fieldItem{
+         margin: 45px auto;
+    }
+    .imgFieldItem{
+        margin-bottom: 45px
+    }
+}
+
+
+
+
