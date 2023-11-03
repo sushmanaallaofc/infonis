@@ -470,6 +470,7 @@ and earn money on every purchase.</div>
        
      </div>
      <MainContainer>
+     <div className="fieldItem">
       <div className="row">
         <div className="col-lg-6 col-12">
           <Typography
@@ -590,6 +591,7 @@ and earn money on every purchase.</div>
             </div>
           </Container>
         </div>
+      </div>
       </div>
     </MainContainer>
     
