@@ -10,8 +10,7 @@ import AboutUs from './screens/aboutUs';
 import Blog from './screens/blog';
 import ContactUs from './screens/contactUs';
 import MobileScreen from './components/mobileScreen';
-import Spotlight from './components/spotlight';
-import PartnerShip from './components/partnerShip';
+
 
 function App() {
  
@@ -29,8 +28,7 @@ function App() {
 <Route exact path='/Blog' element={<Blog />} />
 <Route exact path='/ContactUs' element={<ContactUs />} />
 <Route exact path='/Mobile' element={<MobileScreen />} />
-<Route exact path='/Spotlight' element={<Spotlight />} />
-<Route exact path='/Partnership' element={<PartnerShip />} />
+
 
 
 
