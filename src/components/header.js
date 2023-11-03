@@ -32,6 +32,11 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink exact to="/Delivery" className="nav-link" activeClassName="active">
+          Delivery
+          </NavLink>
+        </li>
+        <li>
           <NavLink exact to="/Blog" className="nav-link" activeClassName="active">
             Blog
           </NavLink>

@@ -170,10 +170,10 @@ const Footer = () => {
            
         </div>
         <div className='d-lg-flex justify-content-around align-items-center' style={{padding:20}}>
-        <div className="copyright-text">
+        <div className="copyright-text mb-3 mb-lg-0">
                             <p>Copyright &copy; 2023, All Right Reserved <a href="">Infinis</a></p>
                         </div>
-            <div className='d-flex align-items-center'>
+            <div className='d-flex justify-content-center align-items-center mb-3 mb-lg-0'>
             <div style={{fontWeight:500,marginRight:20}}>Download App</div>
             <div>
                 <img style={{width:92,height:30,marginRight:20}}  src={playstore}/>
@@ -183,7 +183,7 @@ const Footer = () => {
             </div>
             </div>
             <div>
-            <div className="d-flex">
+            <div className="d-flex justify-content-center  mb-3 mb-lg-0">
                                <div style={{marginRight:20,cursor:'pointer'}}>
                                 <img src={facebookImg} />
                                </div>

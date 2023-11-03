@@ -11,6 +11,7 @@ import Blog from './screens/blog';
 import ContactUs from './screens/contactUs';
 import MobileScreen from './components/mobileScreen';
 import PartnerScreen from './screens/partner';
+import DeliveryScreen from './screens/delivery';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 <Route exact path='/ContactUs' element={<ContactUs />} />
 <Route exact path='/Mobile' element={<MobileScreen />} />
 <Route exact path='/Partner' element={<PartnerScreen />} />
+<Route exact path='/Delivery' element={<DeliveryScreen />} />
 
 
 

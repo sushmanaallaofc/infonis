@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { connect } from 'react-redux';
-import '../styles/screens/SpotLight.css';
-import spotlightImg1 from '../assets/screens/spotlight-desktop-banner1.webp';
-import spotlightImg2 from '../assets/screens/spotlight-desktop-banner2.webp';
-import spotlightImg3 from '../assets/screens/spotlight-desktop-banner3.webp';
-import spotlightCardImg1 from '../assets/screens/spotlight-icon01.webp';
-import spotlightCardImg2 from '../assets/screens/spotlight-icon02.webp';
-import spotlightCardImg3 from '../assets/screens/spotlight-icon03.webp';
-
+import '../styles/screens/Delivery.css';
+import deliveryCardImg1 from '../assets/screens/deliver-icon-earnings.webp';
+import deliveryCardImg2 from '../assets/screens/deliver-icon-two-weeks-payout.webp';
+import deliveryCardImg3 from '../assets/screens/deliver-icon-flexible-schedule.webp';
+import deliveryCardImg4 from '../assets/screens/icon-two-weeks-payout.webp';
+import { Carousel } from "react-bootstrap";
+import img1 from '../assets/screens/Group 23335.webp';
+import img2 from '../assets/screens/Group 23343.webp';
+import img3 from '../assets/screens/Group 23344.webp';
+import { useWindowSize } from 'react-use';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TextField, Button, Checkbox, Typography } from "@mui/material";
 import styled from "@emotion/styled";
@@ -15,7 +17,7 @@ import spotLight from "../assets/images/spotlight.png";
 
 import { faAngleDown, faAngleUp, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-const SpotLight = ({dispatch}) => {
+const Delivery = ({dispatch}) => {
   const MainContainer = styled.div({
     width: "100%",
     background: "linear-gradient(180deg,#F8CB46 0,#318616 100%)",
@@ -108,23 +110,33 @@ const DropdownSymbol = ({ isVisible }) => {
 };
 const [faqs, setFaqs] = React.useState([
   {
-    question: "Can brands that already sell on Blinkit switch over to Blinkit spotlight?",
-    answer: "Yes, please reach out to your point of contact at Blinkit. They will put you in touch with our Blinkit spotlight team. Each brand will be evaluated by the Blinkit spotlight team to identify eligibility of the transition.",
+    question: "Who are Blinkit delivery partners?",
+    answer: "They are independent contractors who partner with Blinkit to pick up grocery items ordered by consumers on the Blinkit app and deliver those items to the convenience of the consumers doorstep. They use their own 2-wheelers to make these deliveries and pick their own schedule.",
     isVisible: false,
   },
   {
-    question: "Do I need to pay a fee to be a part of the program?",
-    answer: "No, there is no fee to participate in the Blinkit spotlight program.",
+    question: "What are the work timings?",
+    answer: "The working hours are flexible and you have an option to choose your own slots. We are happy to share more information at the time of your interview.",
+        isVisible: false,
+  },
+  {
+    question: "When will I start getting the orders to deliver?",
+    answer: "Once you submit all the required documents and your registration is complete with us, our team will run a background verification check. On successful clearance of the same and completion of the onboarding and delivery training module, you will be eligible to start working and delivering orders with us.",
     isVisible: false,
   },
   {
-    question: "Can I choose the locations to operate in?",
-    answer: "Yes, you can choose the locations to operate in. However, the Blinkit spotlight team will need to approve your selection.",
+    question: "What is the mode of payment?",
+    answer: "The earnings you make will be transferred into your bank account on a weekly basis.",
     isVisible: false,
   },
   {
-    question: "Does Blinkit spotlight guarantee an increase in sales?",
-    answer: "Blinkit spotlight can help you to increase your sales, but there is no guarantee. The success of your program will depend on a number of factors, including the quality of your products and services, your marketing efforts, and the overall demand for your products and services.",
+    question: "Is there any joining fees to get on-board as a Blinkit delivery partner?",
+    answer: "Yes, a one-time joining fee is applicable during the on-boarding process. This is collected for various training and support purposes. More details will be shared at the time of your interview.",
+    isVisible: false,
+  },
+  {
+    question: "How much can I earn?",
+    answer: "We follow the ‘per packet model’, wherein, your earnings will be based on every delivery you make. Plus, you also get additional incentives based on the weight you carry and the distance you cover.",
     isVisible: false,
   },
 ]);
@@ -206,6 +218,36 @@ const handleInputChange = (fieldName, value) => {
     [fieldName]: value,
   }));
 };
+const data=[
+  {'content':"My favourite part of the day is seeing our customers smile while receiving their orders from me",
+    'name':'Alok Yadav',
+     'img':img1
+},
+{'content':"I've taken up several jobs in my life but of all the places I've worked so far, I am the happiest working at Infinis",
+    'name':'Husain Rizvi',
+     'img':img2
+},
+{'content':'If you are sincere and a hard worker who understands the importance of time, you will witness a lot of growth at Blinkit',
+    'name':'Manish Singh',
+     'img':img3
+}
+]
+const { width } = useWindowSize();
+  const [showControls, setShowControls] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  useEffect(() => {
+    if (width >= 992) {
+      setShowControls(true);
+    } else {
+      setShowControls(false);
+    }
+    if(width < 768){
+      setShowCards(true)
+    }
+    else{
+      setShowCards(false)
+    }
+  }, [width]);
   return (
     <>
     <MainContainer>
@@ -363,80 +405,80 @@ const handleInputChange = (fieldName, value) => {
     </MainContainer>
     <div className="fieldItem">
         <div className="fieldItemHeader">
-        Join India's most loved grocery shopping platform
+        Join India's most loved quick commerce platform
         </div>
         <p style={{fontWeight:400,fontSize:16,color:'#1F1F1F'}}>
-        At Blinkit, we know what it takes for young brands to attract and connect with customers across segments. In addition, we have the ability to help nurture brands with logistics support that can take them to the next level
-        </p>
+        Become a delivery partner on your own schedule and get best in class pay, among other other benefits. We are looking for dedicated people who take pride in serving fellow Indians.        </p>
         <div className="d-lg-flex justify-content-between">
-           <div className="fieldItemImg">
-            <div className="paragraphCard">
+           <div className=" card mr-lg-3 fieldItemImg mb-4 mb-lg-0">
+            <div className=" card-body mr-2 ">
               <div className="paraCardImgCont">
-             <img className="paraCardImg" src={spotlightCardImg1}/>
+             <img className="paraCardImg" src={deliveryCardImg1}/>
               </div>
               <div className="paraCardTitle">
-                  Grow your business
+                  Monthly earnings
               </div>
               <div className="paraCardContent">
-                <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  targeted placement on marketing assets
+                <div >
+                  <div style={{textAlign:'center'}} >
+                  Earn upto ₹50,000 with incentives and other benefits
                   </div>
                 </div>
-                <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  ability to reach a larger geography with Blinkit footprint
-                  </div>
-                </div>
+                
                   
               </div>
             </div>
            </div>
-           <div className="fieldItemImg">
-            <div className="paragraphCard">
+           <div className=" card mr-lg-3 fieldItemImg mb-4 mb-lg-0">
+            <div className=" card-body mr-2 ">
             <div className="paraCardImgCont">
-             <img className="paraCardImg" src={spotlightCardImg2}/>
+             <img className="paraCardImg" src={deliveryCardImg2}/>
               </div>
               <div className="paraCardTitle">
-                  Guidance from experts
+              Weekly payout
               </div>
               <div className="paraCardContent">
-              <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  data backed insights on how to improve product quality and packaging
-                  </div>
-                </div>
-                <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  opportunities to co-create products with Blinkit
-                  </div>
+                <div >
+                  <div style={{textAlign:'center'}}>
+                  Payment made every 7 days
+                                    </div>
                 </div>
               </div>
             </div>
            </div>
-           <div className="fieldItemImg">
-            <div className="paragraphCard">
+           <div className=" card mr-lg-3 fieldItemImg mb-4 mb-lg-0">
+            <div className=" card-body mr-2 ">
             <div className="paraCardImgCont">
-             <img className="paraCardImg" src={spotlightCardImg3}/>
+             <img className="paraCardImg" src={deliveryCardImg3}/>
               </div>
               <div className="paraCardTitle">
-                  How we support you
+              Flexible schedule
               </div>
               <div className="paraCardContent">
-              <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  a Infinis team will guide you from onboarding                       </div>
-                </div>
-                <div className="d-flex">
-              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
-                  <div >
-                  we will get you cost efficiencies across marketing, supply chain and sourcing                  
-                </div>
+             
+                <div >
+                  <div style={{textAlign:'center'}}>
+                  Be your own boss; choose your work hours (4, 8 or 10 hours)
+                                  </div>
+                  
+                 </div>
+              </div>
+            </div>
+           </div>
+           <div className=" card mr-lg-3 fieldItemImg mb-4 mb-lg-0">
+            <div className=" card-body mr-2 ">
+            <div className="paraCardImgCont">
+             <img className="paraCardImg" src={deliveryCardImg4}/>
+              </div>
+              <div className="paraCardTitle">
+              Insurance coverage
+              </div>
+              <div className="paraCardContent">
+             
+                <div >
+                  <div style={{textAlign:'center'}}>
+                  Deliver safe with our accidental and medical insurance
+                                  </div>
                   
                  </div>
               </div>
@@ -447,19 +489,29 @@ const handleInputChange = (fieldName, value) => {
      </div>
      <div className="fieldItem">
         <div className="fieldItemHeader">
-          Some of the brands featured on spotlight
+        Partner testimonials
         </div>
-        <div className="d-flex justify-content-between">
-           <div className="fieldItemImg">
-            <img className="img-responsive"  src={spotlightImg1} />
-           </div>
-           <div className="fieldItemImg">
-            <img className="img-responsive" src={spotlightImg2} />
-           </div>
-           <div className="fieldItemImg">
-            <img className="img-responsive" src={spotlightImg3} />
-           </div>
-        </div>
+        <Carousel controls={showControls}  indicators={showControls ? false : true} data-bs-theme={showControls ? 'dark' :'light'} interval={showControls ? 10000 : 4000} slide={false}>
+          {
+            data.map((item)=>(
+              <Carousel.Item>
+                 <div className="card  text-white" style={{position:'relative',width:showControls?'80%':'98%',margin:'0 auto',background:"#707477"}}>
+      <div className="card-body" >
+      
+                <div className="paraOnCard">
+                <p >{item.content}</p>
+                <h5>{item.name}</h5>
+                </div>
+                <img  src={item.img} class="img-fluid" />
+      </div>
+    </div>
+              
+            </Carousel.Item>
+            ))
+          }
+    </Carousel>
+        
+       
      </div>
      <div className="fieldItem">
         <div className="fieldItemHeader">
@@ -473,13 +525,21 @@ const handleInputChange = (fieldName, value) => {
           <FAQQuestion>{faq.question}</FAQQuestion>
           <DropdownSymbol isVisible={faq.isVisible} />
           </div>
-          <FAQAnswer isVisible={faq.isVisible}>{faq.answer}</FAQAnswer>
+          <FAQAnswer isVisible={faq.isVisible}>
+          <div className="d-flex">
+              <FontAwesomeIcon icon={faCheckCircle} color="green" style={{marginRight:10}}/>
+                  <div >
+                  {faq.answer}
+                  </div>
+                </div>
+          </FAQAnswer>
         </FAQItem>
       ))}
+    
     </FAQWrapper>
      </div>
     </>
   );
 };
 
-export default connect() (SpotLight);
+export default connect() (Delivery);
