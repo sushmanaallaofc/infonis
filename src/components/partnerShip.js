@@ -23,38 +23,45 @@ const Row = styled.div({
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
-  margin: 'auto',
+  margin: "auto",
   alignItems: "center",
-  maxWidth: '980px',
-  flex: '1'
+  maxWidth: "980px",
+  flex: "1",
 });
 
 const SubRow = styled.div({
   margin: "10px",
-  flex: '1'
+  flex: "1",
 });
 
 const MiniContainer = styled.div({
-    flex: '1',
+  flex: "1",
 });
 const StyledButton = styled(Button)({
-    width: "200px", 
-    marginRight: "10px",
-    backgroundColor: 'black'
-  });
-  
-  const CheckboxContainer = styled.div({
-    display: "flex",
-    alignItems: "center",
-    border: "1px solid #000", 
-    padding: "8px",
-    borderRadius: "5px", 
-    flex: '1'
-  });
-  
+  width: "200px",
+  marginRight: "10px",
+  backgroundColor: "#171515",
+  transition: "background-color 0.5s ease, box-shadow 0.5s ease",
+  textTransform: "lowercase",
+
+  "&:hover": {
+    backgroundColor: "#000",
+    color: "#fff",
+    boxShadow: "0 0 15px rgba(0, 0, 0, 0.7)",
+  },
+});
+
+const CheckboxContainer = styled.label({
+  display: "flex",
+  alignItems: "center",
+  border: "1px solid #000",
+  padding: "8px",
+  borderRadius: "5px",
+  flex: "1",
+  cursor: "pointer",
+});
+
 const Partnership = ({ dispatch }) => {
-
-
   const [formData, setFormData] = useState({
     name: "",
     phoneNumber: "",
@@ -63,6 +70,7 @@ const Partnership = ({ dispatch }) => {
     state: "",
   });
   const [errors, setErrors] = useState({});
+  const [isChecked, setIsChecked] = useState(false);
 
   const validateEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
@@ -72,6 +80,11 @@ const Partnership = ({ dispatch }) => {
     // Phone number validation logic (checking length for 10 digits)
     // Return true if the phone number is valid, false otherwise
     return phoneNumber.length === 10;
+  };
+
+  const handleCheckboxChange = () => {
+    console.log(isChecked);
+    setIsChecked(!isChecked);
   };
 
   const validateForm = () => {
@@ -131,111 +144,113 @@ const Partnership = ({ dispatch }) => {
 
           <Typography
             sx={{
-                fontSize: "18px",
-                "& > span": {
-                  fontWeight: "bold",
-                },
-              }}
+              fontSize: "18px",
+              "& > span": {
+                fontWeight: "bold",
+              },
+            }}
             variant="subtitle1"
             gutterBottom
           >
-            Write to us at <span>sellwithus@infinis.com</span> — you can also drop us an
-            email at <span>info@infinis.com</span> to know more about us.
+            Write to us at <span>sellwithus@infinis.com</span> — you can also
+            drop us an email at <span>info@infinis.com</span> to know more about
+            us.
           </Typography>
         </MiniContainer>
         <MiniContainer>
-        <Container>
-            
-          <SubRow>
-            <TextField
-              fullWidth
-              required
-              label="Name"
-              variant="outlined"
-              value={formData.name}
-              onChange={(e) => handleInputChange("name", e.target.value)}
-            />
-            {errors.name && (
-              <Typography variant="body2" color="error">
-                {errors.name}
-              </Typography>
-            )}
-          </SubRow>
-          <SubRow>
-            <TextField
-              fullWidth
-              onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-              required
-              label="Phone Number"
-              variant="outlined"
-              value={formData.phoneNumber}
-            />
-            {errors.phoneNumber && (
-              <Typography variant="body2" color="error">
-                {errors.phoneNumber}
-              </Typography>
-            )}
-          </SubRow>
-          <SubRow>
-            <TextField
-              fullWidth
-              onChange={(e) => handleInputChange("email", e.target.value)}
-              required
-              label="Email"
-              variant="outlined"
-              value={formData.email}
-            />
-            {errors.email && (
-              <Typography variant="body2" color="error">
-                {errors.email}
-              </Typography>
-            )}
-          </SubRow>
-          <SubRow>
-            <TextField
-              fullWidth
-              required
-              label="City Name"
-              value={formData.cityName}
-              variant="outlined"
-              onChange={(e) => handleInputChange("cityName", e.target.value)}
-            />
-            {errors.cityName && (
-              <Typography variant="body2" color="error">
-                {errors.cityName}
-              </Typography>
-            )}
-          </SubRow>
-          <SubRow>
-            <TextField
-              fullWidth
-              required
-              label="State"
-              variant="outlined"
-              value={formData.state}
-              onChange={(e) => handleInputChange("state", e.target.value)}
-            />
-            {errors.state && (
-              <Typography variant="body2" color="error">
-                {errors.state}
-              </Typography>
-            )}
-          </SubRow>
-          <SubRow style = {{display: 'flex', flexDirection: 'row'}}>
+          <Container>
+            <SubRow>
+              <TextField
+                fullWidth
+                required
+                label="Name"
+                variant="outlined"
+                value={formData.name}
+                onChange={(e) => handleInputChange("name", e.target.value)}
+              />
+              {errors.name && (
+                <Typography variant="body2" color="error">
+                  {errors.name}
+                </Typography>
+              )}
+            </SubRow>
+            <SubRow>
+              <TextField
+                fullWidth
+                onChange={(e) =>
+                  handleInputChange("phoneNumber", e.target.value)
+                }
+                required
+                label="Phone Number"
+                variant="outlined"
+                value={formData.phoneNumber}
+              />
+              {errors.phoneNumber && (
+                <Typography variant="body2" color="error">
+                  {errors.phoneNumber}
+                </Typography>
+              )}
+            </SubRow>
+            <SubRow>
+              <TextField
+                fullWidth
+                onChange={(e) => handleInputChange("email", e.target.value)}
+                required
+                label="Email"
+                variant="outlined"
+                value={formData.email}
+              />
+              {errors.email && (
+                <Typography variant="body2" color="error">
+                  {errors.email}
+                </Typography>
+              )}
+            </SubRow>
+            <SubRow>
+              <TextField
+                fullWidth
+                required
+                label="City Name"
+                value={formData.cityName}
+                variant="outlined"
+                onChange={(e) => handleInputChange("cityName", e.target.value)}
+              />
+              {errors.cityName && (
+                <Typography variant="body2" color="error">
+                  {errors.cityName}
+                </Typography>
+              )}
+            </SubRow>
+            <SubRow>
+              <TextField
+                fullWidth
+                required
+                label="State"
+                variant="outlined"
+                value={formData.state}
+                onChange={(e) => handleInputChange("state", e.target.value)}
+              />
+              {errors.state && (
+                <Typography variant="body2" color="error">
+                  {errors.state}
+                </Typography>
+              )}
+            </SubRow>
+            <SubRow style={{ display: "flex", flexDirection: "row" }}>
               <StyledButton
                 variant="contained"
                 color="primary"
                 onClick={handleSignUp}
+                style={{ height: "50px" }}
               >
-                Signup to See More
+                Contact me
               </StyledButton>
-              <CheckboxContainer>
-                <Checkbox style ={{color: 'black'}}/>
+              <CheckboxContainer style={{ height: "50px" }}>
+                <Checkbox style={{ color: "black" }} />
                 <span>I'm not a robot</span>
               </CheckboxContainer>
             </SubRow>
-          
-        </Container>
+          </Container>
         </MiniContainer>
       </Row>
     </MainContainer>
