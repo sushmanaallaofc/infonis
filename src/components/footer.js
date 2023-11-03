@@ -13,7 +13,7 @@ import appstore from '../assets/components/appStore.webp';
 import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
-    <footer className="footer-section">
+    <div className="footer-section">
         <div className="row" style={{padding:20}}>
             
             <div className='col-lg-4 col-6' style={{textAlign:'center'}}>
@@ -169,7 +169,10 @@ const Footer = () => {
             </div>
            
         </div>
-        <div className='d-flex justify-content-around align-items-center' style={{padding:20}}>
+        <div className='d-lg-flex justify-content-around align-items-center' style={{padding:20}}>
+        <div className="copyright-text">
+                            <p>Copyright &copy; 2023, All Right Reserved <a href="">Infinis</a></p>
+                        </div>
             <div className='d-flex align-items-center'>
             <div style={{fontWeight:500,marginRight:20}}>Download App</div>
             <div>
@@ -195,14 +198,8 @@ const Footer = () => {
                     
         </div>
         
-        <div className="copyright-area">
-            <div className="container">
-                 <div>
-                    
-                 </div>
-            </div>
-        </div>
-    </footer>
+       
+    </div>
   );
 };
 

@@ -46,3 +46,10 @@
   list-style: none;
   text-align: left;
 }
+
+.copyright-text p {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}

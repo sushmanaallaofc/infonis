@@ -6,10 +6,11 @@ import Header from './components/header';
 import Footer from './components/footer';
 // Screens
 import Home from './screens/home';
-import AboutUs from './screens/aboutUs';
+import Spotlight from './screens/spotLight';
 import Blog from './screens/blog';
 import ContactUs from './screens/contactUs';
 import MobileScreen from './components/mobileScreen';
+import PartnerScreen from './screens/partner';
 
 
 function App() {
@@ -18,16 +19,18 @@ function App() {
 <div className="App">
 <Header/>
 <div style={{    background: 'rgb(245, 245, 245)',
-    padding: 10,
     height: '100%',
-    width: '100%'}}>
+    width: '-webkit-fill-available',
+    borderTop:'1px solid #F5F5F5',
+    borderBottom:'1px solid #F5F5F5'}}>
 
 <Routes>
 <Route exact path='/' element={<Home />} />
-<Route exact path='/AboutUs' element={<AboutUs />} />
+<Route exact path='/Spotlight' element={<Spotlight />} />
 <Route exact path='/Blog' element={<Blog />} />
 <Route exact path='/ContactUs' element={<ContactUs />} />
 <Route exact path='/Mobile' element={<MobileScreen />} />
+<Route exact path='/Partner' element={<PartnerScreen />} />
 
 
 
